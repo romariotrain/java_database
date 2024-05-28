@@ -1,15 +1,16 @@
 package jm.task.core.jdbc.service;
 
 import jm.task.core.jdbc.dao.UserDaoHibernateImpl;
+import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbc.model.User;
 import lombok.AllArgsConstructor;
 import java.util.List;
 
 //@AllArgsConstructor
 public class UserServiceImpl implements UserService {
-    private final UserDaoHibernateImpl repository;
+    private final UserDaoJDBCImpl repository;
 
-    public UserServiceImpl(UserDaoHibernateImpl repository) {
+    public UserServiceImpl(UserDaoJDBCImpl repository) {
         this.repository = repository;
     }
 
